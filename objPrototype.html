@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Question:-If after creating object and want some change in object using prototype which can access the value of object.
+      function Employee() {
+        this.name = "Arun";
+        this.id = 101;
+      }
+      var obj1 = new Employee();
+      // obj1.salary = 100000;
+      Employee.prototype.salary = 100000; //using prototype
+      console.log(obj1.salary); //100000
+      var obj2 = new Employee();
+      console.log(obj2.salary); //undefined// after using prototype output:100000;
+    </script>
+  </body>
+</html>
